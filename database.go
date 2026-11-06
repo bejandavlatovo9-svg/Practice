@@ -6,7 +6,7 @@ import (
 )
 var DB *sql.DB
 func ConnectDb(){
-	Connstr := "host=localhost port=5433 user=postgres password=BEZH0909 dbname=postgres sslmode=disable"
+	Connstr := "host=localhost port=5433 user=postgres password dbname=postgres sslmode=disable"
 	db,err := sql.Open("postgres", Connstr)
 	if err != nil{
 		log.Fatal("Database connection error:", err)
